@@ -1,0 +1,36 @@
+# Team 3482 Website
+
+## Synopsis:
+
+### Current Version: 0.0.0
+
+This repository hosts the Wordpress theme used on our website, http://www.team3482.com. This project utilizes Bower to maintain packages and Grunt as a taskrunner; both ruby and Node.js are required for development.
+
+## Contributors
+
+### Setup
+1. Install Ruby and Node.js
+2. Execute these commands...
+  * ```gem install compass```
+  * ```npm install -g bower```
+  * ```npm install -g grunt-cli```
+3. Navigate to this project's directory
+4. Execute these commands...
+  * ```bower install```
+  * ```npm install```
+6. XAMPP (with wordpress installed) is recommended for local testing
+  * Please note that the ```grunt``` command will have to be executed at least once before this project will be recognized by Wordpress as a theme.
+
+### Developing
+* ```grunt```: Initiates livereload on port 35729, (re)compiles sass (with compass and autoprefixer) as well as coffeescript and watches for changes upon which a reload is triggered.
+
+### Deploying
+* ```.ftppass``` is required for deployment directly to http://www.team3482.com
+
+## License
+
+This theme and all of its components are licensed under the GPLv3 license.
+
+## Author
+
+### Corey Mason - http://www.coreymason.net

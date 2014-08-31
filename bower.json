@@ -1,0 +1,22 @@
+{
+  "name": "team-3482",
+  "version": "0.0.0",
+  "authors": [
+    "Corey Mason"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "team3482.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.4.0",
+    "fontawesome": "~4.1.0",
+    "octicons": "~2.1.1"
+  }
+}
