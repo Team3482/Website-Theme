@@ -87,3 +87,40 @@ function Team3482_setup_author() {
 	}
 }
 add_action( 'wp', 'team3482_setup_author' );
+
+/**
+ * Includes Google Analytics in the footer of every page.
+ *
+ * @return void
+ */
+function add_analytics() { 
+	?>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-54336425-1', 'auto');
+		ga('require', 'displayfeatures');
+		ga('require', 'linkid', 'linkid.js');
+		ga('send', 'pageview');
+	</script>
+	<?php
+}
+add_action('wp_footer', 'add_analytics');
+
+/**
+ * Calculates the correct range of years used in the footer's copyright text.
+ * 
+ * @return string The copyright text.
+ */
+function copyright() {
+    $founding_year = 2013;
+    $current_year = date('Y');
+    if($founding_year != $current_year) {
+        $output = '&copy; ' . $founding_year . '-' . $current_year . ' Westmont Robotics';
+    } else {
+        $output = '&copy; ' . $founding_year . ' Westmont Robotics';
+    }
+    return $output;
+}

@@ -12,9 +12,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'team3482' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'team3482' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'team3482' ), 'team3482', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<?php echo copyright(); ?>
+			<span class="sep"> &middot; </span>
+			Designed by <a href="http://coreymason.net/" rel="designer">Corey Mason</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

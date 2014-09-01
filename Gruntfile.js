@@ -49,7 +49,7 @@ module.exports = function(grunt) {
         watch: {
             compass: {
                 files: 'sass/**/*.scss',
-				tasks: ['compass', 'autoprefixer'] //still need autoprefixer
+				tasks: ['compass', 'autoprefixer']
             },
             coffee: {
                 files: 'coffee/**/*.coffee',
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [ {
 					from: /^.*Version:.*$/m,
-					to: ' * Version: <%= pkg.version %>'
+					to: 'Version: <%= pkg.version %>'
 				} ]
 			},
 			readme: {
@@ -105,6 +105,16 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.registerTask('bumpto', function(releaseType) {
+        if ('major' !== releaseType && 'minor' !== releaseType && 'patch' !== releaseType) {
+            grunt.fail.fatal('Please specify the bump type (e.g., "grunt bumpto:patch")');
+        } else {
+            grunt.task.run('bump-only:' + releaseType);
+            // Update the version numbers
+            grunt.task.run('replace' );
+        }
+    });
+
     // Default tasks
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['compass', 'watch']);
 };

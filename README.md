@@ -2,7 +2,7 @@
 
 ## Synopsis:
 
-### Current Version: 0.0.0
+### Current Version: 0.0.1
 
 This repository hosts the Wordpress theme used on our website, http://www.team3482.com. This project utilizes Bower to maintain packages and Grunt as a taskrunner; both ruby and Node.js are required for development.
 
@@ -10,12 +10,11 @@ This repository hosts the Wordpress theme used on our website, http://www.team34
 
 ### Setup
 1. Install Ruby and Node.js
-2. Execute these commands...
-  * ```gem install compass```
+2. Navigate to this project's directory
+3. Execute these commands...
   * ```npm install -g bower```
   * ```npm install -g grunt-cli```
-3. Navigate to this project's directory
-4. Execute these commands...
+  * ```bundle install``` or ```gem install compass```
   * ```bower install```
   * ```npm install```
 6. XAMPP (with wordpress installed) is recommended for local testing
@@ -23,6 +22,7 @@ This repository hosts the Wordpress theme used on our website, http://www.team34
 
 ### Developing
 * ```grunt```: Initiates livereload on port 35729, (re)compiles sass (with compass and autoprefixer) as well as coffeescript and watches for changes upon which a reload is triggered.
+* ```bumpto:(major/minor/patch)```: Updates the version number in all relevant files.
 
 ### Deploying
 * ```.ftppass``` is required for deployment directly to http://www.team3482.com
