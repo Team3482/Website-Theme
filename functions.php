@@ -101,6 +101,16 @@ function Team3482_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'team3482-modernizr', get_home_path() . '/bower_components/modernizr/modernizr.js' ); //should be minified?
+
+	wp_enqueue_script( 'team3482-jquery', get_home_path() . '/bower_components/jquery/dist/jquery.min.js', true );
+
+	wp_enqueue_script( 'team3482-fastclick', get_home_path() . '/bower_components/fastclick/lib/fastclick.js', true ); //should be minified?
+
+	wp_enqueue_script( 'team3482-foundation', get_home_path() . '/bower_components/foundation/js/foundation.min.js', true ); //still need to initiate
+
+	//look into jquery placeholder and cookie
 }
 add_action( 'wp_enqueue_scripts', 'team3482_scripts' );
 

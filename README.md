@@ -2,7 +2,7 @@
 
 ## Synopsis:
 
-### Current Version: 0.0.1
+### Current Version: 0.0.2
 
 This repository hosts the Wordpress theme used on our website, http://www.team3482.com. This project utilizes Bower to maintain packages and Grunt as a taskrunner; both ruby and Node.js are required for development.
 

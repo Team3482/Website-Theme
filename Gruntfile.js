@@ -116,5 +116,5 @@ module.exports = function(grunt) {
     });
 
     // Default tasks
-    grunt.registerTask('default', ['compass', 'watch']);
+    grunt.registerTask('default', ['compass', 'autoprefixer', 'watch']);
 };
