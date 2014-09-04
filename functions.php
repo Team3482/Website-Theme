@@ -102,15 +102,17 @@ function Team3482_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'team3482-modernizr', get_home_path() . '/bower_components/modernizr/modernizr.js' ); //should be minified?
+	wp_enqueue_script( 'team3482-modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js' ); //should be minified?
 
-	wp_enqueue_script( 'team3482-jquery', get_home_path() . '/bower_components/jquery/dist/jquery.min.js', true );
+	wp_enqueue_script( 'team3482-jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', array(), '2.1.1', true );
 
-	wp_enqueue_script( 'team3482-fastclick', get_home_path() . '/bower_components/fastclick/lib/fastclick.js', true ); //should be minified?
-
-	wp_enqueue_script( 'team3482-foundation', get_home_path() . '/bower_components/foundation/js/foundation.min.js', true ); //still need to initiate
+	wp_enqueue_script( 'team3482-fastclick', get_template_directory_uri() . '/bower_components/fastclick/lib/fastclick.js', array(), '1.0.3', true ); //should be minified?
 
 	//look into jquery placeholder and cookie
+
+	wp_enqueue_script( 'team3482-foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', array(), '5.4.3', true );
+
+	wp_enqueue_script( 'team3482-foundation-init', get_template_directory_uri() . '/js/foundation.js', array(), '0.0.0', true ); //maybe move this to main js file and minify?
 }
 add_action( 'wp_enqueue_scripts', 'team3482_scripts' );
 
