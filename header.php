@@ -48,6 +48,11 @@
                     <?php if( of_get_option('logo_image') ) : ?>
                     	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo of_get_option('logo_image'); ?>" /></a>
                     <?php else : ?>
+                    
+                    <a href="http://team3482.com">
+                    <img src="http://team3482.com/wp-content/uploads/2015/08/Banner-Logo.png"> </a>
+                    
+                    
                         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
                     <?php endif; ?>
@@ -56,36 +61,54 @@
                 
             </div>
             
+            
             <div class="site-header-half-width-nav">
     
                 <nav id="site-navigation" class="main-navigation" role="navigation">
                     <div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'BizKit' ); ?>"><?php _e( 'Skip to content', 'BizKit' ); ?></a></div>
-        
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'main-nav', 'fallback_cb' => 'BizKit_backupmenu'  ) ); ?>
+                    
+                                
+                                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'main-nav', 'fallback_cb' => 'BizKit_backupmenu'  ) ); ?>
+                            
                 </nav><!-- #site-navigation -->
                 
+                
             </div>                
+            
             
         <?php else : ?>
         
             <div class="site-branding">
             
+            
+                        
             	<?php if( of_get_option('logo_image') ) : ?>
                 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo of_get_option('logo_image'); ?>" /></a>
                 <?php else : ?>
                         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                        
+                                    
                 <?php endif; ?>
                 
+                            
             </div> 
         
         <?php endif; ?>
-            
-    	</div><!-- #Responsive-Container -->            
+        
+    	</div><!-- #Responsive-Container -->
+    	
             
 	</header><!-- #masthead -->
-    
+	
+        <?php if( is_home() || is_front_page() ) :?>
+        <?php 
+        echo do_shortcode("[metaslider id=550]"); 
+        ?>
+        <?php endif;?>
+        
     <div id="inner-container"> 
+    
     
     <?php if( !of_get_option('logo_layout_style') || of_get_option('logo_layout_style') == 'onebone' ) : ?>
     <div class="main-navigation-inner">
