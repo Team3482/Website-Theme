@@ -4,22 +4,3 @@
 *.DS_Store
 *.swp
 *.out
-
-### Bower ###
-bower_components
-
-### Node ###
-node_modules
-
-### Grunt ###
-dist
-
-### Sass ###
-.sass-cache
-
-### Preprocessed ###
-style.css
-# Eventually js due to coffescript preprocessor
-
-### Security ###
-.ftppass
